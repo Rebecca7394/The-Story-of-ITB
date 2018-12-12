@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rebecca Stephens | Home</title>
+	<link href="css/homepage.css" rel="stylesheet" type="text/css">
+	<link href="css/navbar.css" rel="stylesheet" type="text/css">
+	<link href="css/headerandfooter.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+	<div class="header">
+		<img src="images/logo.jpg" alt="itblogo">
+			
+		<h1>The Story of ITB</h1>
+ 	<div class="navbar" id="websitenavbar">
+	 	<a href="index.html">Home</a>
+	 	|
+ 	 	<a href="about.html">About ITB</a>
+ 	 	|
+ 	 	<a href="history.html">History </a>
+ 	 	|
+  		<a href="ecology.html">Ecology</a>
+  		|
+  		<a href="people.html">People of ITB</a>
+	</div>
+		
+	</div>
+</header>
+
+<body>
+	<body background="images/white.jpg">
+	<div class="container">
+		<center><h3>Welcome to the Story of ITB site. Here you can enhance your knowledge on the history of the college, the ecology around campus and get an insight about the people of ITB.</h3></center>
+		
+		<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/itb.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/TU2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/campus.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+	
+<script> 
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+	</script>
+	
+		
+			<div class="samples">
+				<div class="sample1">
+					<a href="history.html">
+						<h2>History of ITB</h2>
+							<img src="images/map.jpg" alt="campus" height="353" width="100%">
+					</a>
+				</div>
+				<div class="sample2">
+					<a href="ecology.html">
+						<h2>Ecology</h2>
+							<img src="images/flower.jpg" alt="flower" height="353" width="100%">
+					</a>
+					
+				</div>
+				<div class="sample3">
+					<a href="people.html">
+						<h2>People of ITB</h2>
+							<img src="images/students.jpg" alt="video logo" height="353" width="100%">
+					</a>
+				</div>
+			</div>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+</body>
+
+<footer>
+	<div class="footer">
+		&copy; Copyright B0017828
+	</div>
+</footer>
+</html>
